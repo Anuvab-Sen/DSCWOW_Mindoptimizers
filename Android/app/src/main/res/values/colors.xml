@@ -3,4 +3,18 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000</color>
+
+    <!--    Text Color-->
+    <color name="text">#FFFFFF</color>
+    <color name="secondary_text">#D8D8D8</color>
+
+    <!--    Dashboard Colours-->
+    <color name="search_background">#ffffff</color>
+
+    <!--    Background-->
+    <color name="home_background_tint">#8C333333</color>
+    <color name="banner_background">#f0e9e9</color>
+    <color name="banner_background_light">#56F1E9CE</color>
 </resources>
