@@ -14,13 +14,12 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/loginBackButton"
+            android:id="@+id/login_backButton"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:padding="5dp"
             android:src="@drawable/back"
-            app:tint="@color/white"
-            android:onClick="openWelcomeScreen"/>
+            app:tint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,23 +40,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:hint="@string/username"
+                android:hint="@string/email"
                 app:hintTextColor="@color/white"
                 app:boxStrokeColor="@color/white"
                 android:textColorHint="@color/secondary_text"
                 app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/user"
+                app:startIconDrawable="@drawable/email"
                 app:startIconTint="@color/white"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_email"
                     android:theme="@style/TextInputLayoutStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/lato_regular"
                     android:textColor="@color/white"
-                    android:inputType="text"
+                    android:inputType="textEmailAddress"
                     android:importantForAutofill="no"/>
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -79,6 +79,7 @@
                 >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/login_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/lato_regular"
@@ -117,20 +118,36 @@
                     />
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/loginScreen_login_btn"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/login"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:background="@drawable/btn_rounded"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:onClick="openDashboard"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_rounded">
+
+                <Button
+                    android:id="@+id/login_loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="22sp"
+                    android:gravity="center" />
+
+                <ProgressBar
+                    android:id="@+id/register_progress"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:indeterminateTint="@color/progressBar"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -149,14 +166,14 @@
                     android:text="Don't have an account ? "
                     tools:ignore="HardcodedText" />
                 <Button
+                    android:id="@+id/login_signUp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/sign_up"
                     android:background="#00000000"
                     android:gravity="center_vertical"
                     android:padding="5dp"
-                    android:textColor="@color/text"
-                    android:onClick="openSignUp"/>
+                    android:textColor="@color/text" />
 
             </LinearLayout>
         </LinearLayout>

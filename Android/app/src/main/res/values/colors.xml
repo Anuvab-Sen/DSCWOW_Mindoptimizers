@@ -6,6 +6,8 @@
     <color name="white">#ffffff</color>
     <color name="black">#000</color>
 
+    <color name="progressBar">#FFFFFF</color>
+
     <!--    Text Color-->
     <color name="text">#FFFFFF</color>
     <color name="secondary_text">#D8D8D8</color>

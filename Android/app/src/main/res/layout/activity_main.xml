@@ -55,8 +55,7 @@
                 android:fontFamily="@font/lato_bold"
                 android:text="@string/login"
                 android:textColor="@color/white"
-                android:textSize="20sp"
-                android:onClick="openLoginScreen"/>
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/signup_btn"
@@ -71,8 +70,7 @@
                 android:fontFamily="@font/lato_bold"
                 android:text="@string/sign_up"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                android:onClick="openSignUpScreen"/>
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -2,11 +2,11 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".RegisterActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_welcome"
-    android:padding="25dp">
+    android:padding="25dp"
+    tools:context=".RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,13 +14,12 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/loginBackButton"
+            android:id="@+id/register_backButton"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:padding="5dp"
             android:src="@drawable/back"
-            app:tint="@color/white"
-            android:onClick="openWelcomeScreen"/>
+            app:tint="@color/white" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,154 +33,170 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="70dp">
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/username"
-                app:hintTextColor="@color/white"
-                app:boxStrokeColor="@color/white"
                 android:textColorHint="@color/secondary_text"
+                app:boxStrokeColor="@color/white"
                 app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/user"
-                app:startIconTint="@color/white"
                 app:endIconMode="clear_text"
-                app:endIconTint="@color/white">
+                app:endIconTint="@color/white"
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/user"
+                app:startIconTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:theme="@style/TextInputLayoutStyle"
+                    android:id="@+id/register_username"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/lato_regular"
-                    android:textColor="@color/white"
+                    android:importantForAutofill="no"
                     android:inputType="text"
-                    android:importantForAutofill="no"/>
+                    android:textColor="@color/white"
+                    android:theme="@style/TextInputLayoutStyle" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/email"
-                app:hintTextColor="@color/white"
                 android:textColorHint="@color/secondary_text"
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeWidthFocused="2dp"
+                app:hintTextColor="@color/white"
                 app:startIconDrawable="@drawable/email"
-                app:startIconTint="@color/white"
-                >
+                app:startIconTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/lato_regular"
-                    android:textColor="@color/white"
+                    android:importantForAutofill="no"
                     android:inputType="textEmailAddress"
-                    app:hintTextColor="@color/white"
-                    android:importantForAutofill="no"/>
+                    android:textColor="@color/white"
+                    app:hintTextColor="@color/white" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:hint="@string/password"
-                app:hintTextColor="@color/white"
                 android:textColorHint="@color/secondary_text"
                 app:boxStrokeColor="@color/white"
                 app:boxStrokeWidthFocused="2dp"
-                app:startIconDrawable="@drawable/lock"
-                app:startIconTint="@color/white"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/white"
-                >
+                app:hintTextColor="@color/white"
+                app:startIconDrawable="@drawable/lock"
+                app:startIconTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_password"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:fontFamily="@font/lato_regular"
-                    android:textColor="@color/white"
+                    android:importantForAutofill="no"
                     android:inputType="textPassword"
-                    app:hintTextColor="@color/white"
-                    android:importantForAutofill="no"/>
+                    android:textColor="@color/white"
+                    app:hintTextColor="@color/white" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <RelativeLayout
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:paddingLeft="5dp"
-                    android:paddingRight="5dp"
+                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-                    android:text="@string/remeber_me"
-                    android:buttonTint="@color/white"
-                    android:textColor="@color/white"
                     android:layout_centerVertical="true"
-                    />
+                    android:buttonTint="@color/white"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="@string/remeber_me"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/forgot_password"
-                    android:background="#00000000"
-                    android:textColor="@color/white"
                     android:layout_alignParentEnd="true"
-                    />
+                    android:background="#00000000"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/white" />
             </RelativeLayout>
 
-            <Button
-                android:id="@+id/loginScreen_login_btn"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="@string/sign_up"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:background="@drawable/btn_rounded"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:onClick="openDashboard"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/btn_rounded">
+
+                <Button
+                    android:id="@+id/register_signUpBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/lato_bold"
+                    android:textSize="22sp"
+                    android:gravity="center" />
+
+                <ProgressBar
+                    android:id="@+id/register_progress"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:indeterminateTint="@color/progressBar"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
+                android:layout_gravity="center"
                 android:layout_marginLeft="60dp"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
+                android:layout_marginRight="50dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="top"
-                    android:textSize="15sp"
-                    android:textColor="@color/text"
                     android:text="Don't have an account ? "
+                    android:textColor="@color/text"
+                    android:textSize="15sp"
                     tools:ignore="HardcodedText" />
+
                 <Button
+                    android:id="@+id/register_login"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/login"
                     android:background="#00000000"
                     android:gravity="center_vertical"
                     android:padding="5dp"
-                    android:textColor="@color/text"
-                    android:onClick="openLogin"/>
+                    android:text="@string/login"
+                    android:textColor="@color/text" />
 
             </LinearLayout>
         </LinearLayout>
