@@ -1,1 +1,1 @@
-# DSCWOW_toxicityfreeapp
+# DSCWOW_MindOptimizers
