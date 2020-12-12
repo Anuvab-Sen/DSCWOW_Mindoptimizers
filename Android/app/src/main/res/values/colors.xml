@@ -7,6 +7,8 @@
     <color name="black">#000</color>
 
     <color name="progressBar">#FFFFFF</color>
+    <color name="bottomNavIconsColor">#808080</color>
+    <color name="bottomNavIconSelectedColor">#000000</color>
 
     <!--    Text Color-->
     <color name="text">#FFFFFF</color>
@@ -19,4 +21,8 @@
     <color name="home_background_tint">#8C333333</color>
     <color name="banner_background">#f0e9e9</color>
     <color name="banner_background_light">#56F1E9CE</color>
+
+    <!-- RV Text Color-->
+    <color name="rv_text">#000000</color>
+    <color name="rv_secondary_text">#555555</color>
 </resources>

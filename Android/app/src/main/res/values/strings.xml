@@ -10,4 +10,6 @@
     <string name="forgot_password">Forgot Password</string>
     <string name="register">Register</string>
     <string name="email">Email</string>
+    <string name="search_something">Search something ...</string>
+    <string name="full_name">Full Name</string>
 </resources>

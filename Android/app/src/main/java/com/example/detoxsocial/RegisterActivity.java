@@ -27,7 +27,7 @@ import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    TextInputEditText username,email,password;
+    TextInputEditText username,fullname, email,password;
     Button registerBtn,loginBtn;
     ImageView back;
 
@@ -40,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         username = findViewById(R.id.register_username);
+        fullname = findViewById(R.id.register_fullname);
         email = findViewById(R.id.register_email);
         password = findViewById(R.id.register_password);
         registerBtn = findViewById(R.id.register_signUpBtn);
@@ -56,17 +57,18 @@ public class RegisterActivity extends AppCompatActivity {
                 registerBtn.setVisibility(View.GONE);
 
                 String str_username = username.getText().toString();
+                String str_fullname = fullname.getText().toString();
                 String str_email = email.getText().toString();
                 String str_password = password.getText().toString();
 
-                if(TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)){
+                if(TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_fullname) ||TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)){
                     Toast.makeText(RegisterActivity.this,"All fields are required!", Toast.LENGTH_SHORT).show();
                 }
                 else if(str_password.length() < 6){
                     Toast.makeText(RegisterActivity.this,"Password must be at-least 6 characters!", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    register(str_username,str_email,str_password);
+                    register(str_username,str_fullname,str_email,str_password);
                 }
             }
         });
@@ -86,7 +88,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void register(final String username, String email, String password){
+    private void register(final String username, final String fullname, String email, String password){
         auth.createUserWithEmailAndPassword(email,password)
                 .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -98,7 +100,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                             HashMap<String, Object> hashMap = new HashMap<>();
                             hashMap.put("id",userid);
-                            hashMap.put("username",username.toLowerCase());
+                            hashMap.put("username",username);
+                            hashMap.put("fullname",fullname);
                             hashMap.put("imageUrl","https://firebasestorage.googleapis.com/v0/b/detoxsocial-1ffcd.appspot.com/o/30916342.jpg?alt=media&token=ab0eccc7-9db0-4196-a3a4-601f52cf3295");
 
                             if(reference == null) Log.i("Content-Filter","Null");
