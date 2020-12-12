@@ -9,7 +9,8 @@
     <color name="progressBar">#FFFFFF</color>
     <color name="bottomNavIconsColor">#808080</color>
     <color name="bottomNavIconSelectedColor">#000000</color>
-
+    <color name="black_40_alpha">#66232323</color>
+    <color name="homePostIconsColor">#454545</color>
     <!--    Text Color-->
     <color name="text">#FFFFFF</color>
     <color name="secondary_text">#D8D8D8</color>
@@ -25,4 +26,9 @@
     <!-- RV Text Color-->
     <color name="rv_text">#000000</color>
     <color name="rv_secondary_text">#555555</color>
+
+    <!-- Post Text Color-->
+    <color name="post_text">#000000</color>
+    <color name="post_secondary_text">#404040</color>
+    <color name="post_text_3">#858585</color>
 </resources>

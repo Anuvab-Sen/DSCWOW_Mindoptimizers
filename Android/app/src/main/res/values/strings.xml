@@ -12,4 +12,6 @@
     <string name="email">Email</string>
     <string name="search_something">Search something ...</string>
     <string name="full_name">Full Name</string>
+    <string name="post">POST</string>
+    <string name="caption">Caption</string>
 </resources>
